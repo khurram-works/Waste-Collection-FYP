@@ -26,7 +26,6 @@ export default function RequestDetailsModal({ isOpen, onClose, request }) {
     id,
     wasteType = "—",
     submitted = "—",
-    scheduled = "—",
     status = "Pending",
     earnings = "—",
     // Extended fields (add these to your request objects)

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignUpPage = () => {
+function SignUpPage(){
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -12,6 +12,12 @@ const SignUpPage = () => {
   const citizendashboard = () => {
     navigate("/citizen-dashboard");
   };
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>){
+    e.preventDefault();
+    console.log("Form submitted");
+  }
+
   return (
     <div className="font-display bg-background-light text-[#121614] min-h-screen flex flex-col">
       {/* Navigation */}
@@ -51,7 +57,7 @@ const SignUpPage = () => {
           </div>
 
           {/* Registration Form */}
-          <form className="px-8 pb-10 space-y-5">
+          <form className="px-8 pb-10 space-y-5" onSubmit={handleSubmit} >
             {/* Full Name */}
             <div className="flex flex-col gap-2">
               <label className="text-sm font-medium text-[#121614]">
@@ -126,14 +132,14 @@ const SignUpPage = () => {
                 I agree to the{" "}
                 <a
                   className="text-primary hover:underline font-medium"
-                  href="#"
+                  
                 >
                   Terms of Service
                 </a>{" "}
                 and{" "}
                 <a
                   className="text-primary hover:underline font-medium"
-                  href="#"
+                  
                 >
                   Privacy Policy
                 </a>
@@ -145,7 +151,7 @@ const SignUpPage = () => {
             <button
               className="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-4 rounded-lg transition-colors shadow-lg shadow-primary/20 mt-4 flex items-center justify-center gap-2 cursor-pointer"
               type="submit"
-              onClick={citizendashboard}
+              onClick={handleLogin}
             >
               <span className="material-symbols-outlined text-[20px]">
                 person_add

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AuditLogs({}) {
+export default function AuditLogs() {
   return (
     <>
       <main className="flex-1 flex flex-col overflow-hidden">

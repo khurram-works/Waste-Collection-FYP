@@ -31,7 +31,9 @@ export default function CitizenDashboard() {
 
           {/* Main Content Area */}
           <div className="flex-1 overflow-y-auto">
-            {citizendashboard === "Dashboard" && <CitizenDashboardView currentView={citizendashboard} setCurrentView={setCitizendashboard}/>}
+            {citizendashboard === "Dashboard" && (
+              <CitizenDashboardView setCurrentView={setCitizendashboard} />
+            )}
             {citizendashboard === "Request" && <CitizenRequestView />}
             {citizendashboard === "RequestStatus" && <CitizenRequestStatusView />}
             {citizendashboard === "Earnings" && <CitizenEarningsView />}

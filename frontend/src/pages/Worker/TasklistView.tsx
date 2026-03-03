@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TaskDetailsDrawer from "./TaskDetailsDrawer";
-import MapView from "./MapView";
+import MapView from "./Mapview";
 
 // Sample task data (you would get this from props or an API)
 const tasksData = [
@@ -39,7 +39,7 @@ const tasksData = [
   },
 ];
 
-const TaskListView = ({ worker }) => {
+const TaskListView = () => {
   const [currentView, setCurrentView] = useState("list"); // "list" or "map"
   const [selectedTask, setSelectedTask] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);

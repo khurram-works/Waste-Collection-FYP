@@ -7,7 +7,7 @@ import WorkerView from './Admin/WorkerView';
 import ReportView from './Admin/ReportView';
 import AuditLogs from './Admin/AuditLogs';
 
-const admindashboard = () => {
+const AdminDashboard = () => {
   const [currentView, setCurrentView] = useState('admin');
 
   // Map view keys to components
@@ -25,11 +25,11 @@ const admindashboard = () => {
       <div className="flex">
         <Sidebar currentView={currentView} onViewChange={setCurrentView} />
         <div className="flex-1">
-          {views[currentView] || <DashboardView />}
+          {views[currentView] || <DashboardView onViewChange={setCurrentView} />}
         </div>
       </div>
     </div>
   );
 };
 
-export default admindashboard;
+export default AdminDashboard;

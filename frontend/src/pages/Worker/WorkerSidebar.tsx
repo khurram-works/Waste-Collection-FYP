@@ -1,6 +1,6 @@
 import React from "react";
 
-const WorkerSidebar = ({ dashboardView, setDashboardView, worker }) => {
+const WorkerSidebar = ({ dashboardView, setDashboardView }) => {
   return (
     <aside className="w-64 bg-white border-r border-[#dde3e0] flex flex-col justify-between p-4 shrink-0">
       <div className="flex flex-col gap-6">

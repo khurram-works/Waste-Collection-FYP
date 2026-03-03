@@ -1,7 +1,7 @@
 import React from "react";
 
 function ProcessSection() {
-  const steps = [
+  const _steps = [
     {
       icon: "smartphone",
       title: "Step 1: Submit",
@@ -30,7 +30,7 @@ function ProcessSection() {
             <div className="h-1 w-20 bg-primary mt-4 mx-auto md:mx-0"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
+            {_steps.map((step, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-5 p-8 bg-white  rounded-xl shadow-sm hover:shadow-md transition-shadow"

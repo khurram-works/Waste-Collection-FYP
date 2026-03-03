@@ -30,12 +30,11 @@ export default function WorkerDashboard() {
         <WorkerSidebar
           dashboardView={dashboardView}
           setDashboardView={setDashboardView}
-          worker={worker}
         />
 
         {/* Main Content Area */}
         <div className="flex-1 overflow-y-auto">
-          {dashboardView === "workertask" && <TaskListView worker={worker} />}
+          {dashboardView === "workertask" && <TaskListView />}
           {dashboardView === "taskhistory" && <TaskHistory />}
           {dashboardView === "profile" && <Profile worker={worker} />}
         </div>

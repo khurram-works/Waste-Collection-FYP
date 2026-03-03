@@ -1,6 +1,6 @@
 import React from "react";
 
-const CitizenDashboardView = ({ currentview, setCurrentView }) => {
+const CitizenDashboardView = ({ setCurrentView }) => {
   return (
     <main className="flex-1 overflow-y-auto bg-background-light p-8">
       <div className="max-w-275 mx-auto space-y-8">
